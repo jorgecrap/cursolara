@@ -13,6 +13,26 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+/*
 Route::get('/', function () {
     return view('welcome');
 });
+*/
+
+Route::get('notas', function () {
+    return 'Notas | Listado';
+});
+
+Route::get('notas/crear', function () {
+    return 'Notas | Crear nota';
+});
+
+Route::get('notas/{id}/editar', function ($id) {
+    return 'Notas | Editar nota '.$id;
+});
+
+Route::get('notas/{id}', function ($id) {
+    return 'Notas | Detalle nota '.$id;
+});
+
+
